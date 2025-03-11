@@ -1,16 +1,16 @@
 apiVersion: apps/v1
 kind: Deployment
-metadata:   
-  annotations:  
+metadata:
+  annotations:
     tad.gitops.set/image: ".spec.template.spec.containers[0].image"
     tad.gitops.get/image: ".spec.template.spec.containers[0].image"
     tad.gitops.set/replicas: ".spec.replicas"
-    tad.gitops.get/replicas: ".spec.replicas" 
+    tad.gitops.get/replicas: ".spec.replicas"
   name: ucvmqlzjx-java-springboot
 spec:
-  replicas: 1 
-  template: 
+  replicas: 1
+  template:
     spec:
       containers:
-      - image: quay.io/redhat-appstudio/dance-bootstrap-app:latest
-        name: container-image  
+        - image: rhtap-quay-quay-rhtap-quay.apps.6230c817-0df2-442a-87c4-b60311104c65.prod.konfluxeaas.com/rhtap/rhtap-qe-java-springboot:5d7cb905ddfe85e9a3a64dde975aeb205ec62cfd@sha256:f58f84f2a2c41f8c5c867b4ee4ecf8d517a6d42b5179f20974c35d43ec4f8b59
+          name: container-image
